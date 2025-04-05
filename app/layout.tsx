@@ -3,7 +3,7 @@ import { Inter } from "next/font/google"
 import "./globals.css"
 import { Toaster } from "@/components/toaster"
 import { ThemeProvider } from "@/components/theme-provider"
-import { ConsoltoChat } from "@/components/ConsoltoChat"
+import ConsoltoChat from "@/components/ConsoltoChat"
 import { Analytics } from '@vercel/analytics/react';
 
 const inter = Inter({ subsets: ["latin"] })
@@ -32,8 +32,3 @@ export default function RootLayout({
     </html>
   )
 }
-
-
-
-import './globals.css'
-import ConsoltoChat from "@/components/ConsoltoChat"
