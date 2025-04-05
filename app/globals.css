@@ -83,3 +83,20 @@
   }
 }
 
+@layer components {
+  .stroke-gradient.from-blue-600.to-blue-400 {
+    --start-color: theme("colors.blue.600");
+    --end-color: theme("colors.blue.400");
+  }
+
+  .stroke-gradient.from-purple-600.to-purple-400 {
+    --start-color: theme("colors.purple.600");
+    --end-color: theme("colors.purple.400");
+  }
+
+  .stroke-gradient.from-indigo-600.to-indigo-400 {
+    --start-color: theme("colors.indigo.600");
+    --end-color: theme("colors.indigo.400");
+  }
+}
+

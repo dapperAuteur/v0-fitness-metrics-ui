@@ -3,13 +3,14 @@ import { Inter } from "next/font/google"
 import "./globals.css"
 import { Toaster } from "@/components/toaster"
 import { ThemeProvider } from "@/components/theme-provider"
-import { ThemeToggle } from "@/components/theme-toggle"
+import { ConsoltoChat } from "@/components/ConsoltoChat"
+import { Analytics } from '@vercel/analytics/react';
 
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata = {
-  title: "Fitness Metrics",
-  description: "Track your sleep patterns and wellness over time",
+  title: "World Fastest Centenarian",
+  description: "Track your fitness journey to becoming the world's fastest centenarian",
     generator: 'v0.dev'
 }
 
@@ -22,10 +23,9 @@ export default function RootLayout({
     <html lang="en" className="dark">
       <body className={inter.className}>
         <ThemeProvider defaultTheme="dark">
-          <div className="fixed top-4 right-4 z-50">
-            <ThemeToggle />
-          </div>
           {children}
+          <Analytics />
+          <ConsoltoChat />
           <Toaster />
         </ThemeProvider>
       </body>
@@ -36,3 +36,4 @@ export default function RootLayout({
 
 
 import './globals.css'
+import ConsoltoChat from "@/components/ConsoltoChat"
