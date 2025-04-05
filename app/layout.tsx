@@ -3,6 +3,8 @@ import { Inter } from "next/font/google"
 import "./globals.css"
 import { Toaster } from "@/components/toaster"
 import { ThemeProvider } from "@/components/theme-provider"
+import { ConsoltoChat } from "@/components/ConsoltoChat"
+import { Analytics } from '@vercel/analytics/react';
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -22,6 +24,8 @@ export default function RootLayout({
       <body className={inter.className}>
         <ThemeProvider defaultTheme="dark">
           {children}
+          <Analytics />
+          <ConsoltoChat />
           <Toaster />
         </ThemeProvider>
       </body>
@@ -32,3 +36,4 @@ export default function RootLayout({
 
 
 import './globals.css'
+import ConsoltoChat from "@/components/ConsoltoChat"
